@@ -1,26 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@200&family=Righteous&display=swap');
 
 body {
   font-family: 'Righteous', sans-serif;
   text-align: center;
   background: rgb(208, 205, 255);
   background: #1cb6ad;
+  display: flex;
+  justify-content: center;
 }
 
-h1 {
+/* h1 {
   text-transform: uppercase;
   font-size: 3rem;
-}
+} */
 
-h2 {
+/* h2 {
   text-transform: uppercase;
   font-size: 2rem;
   margin-top: 100px
-}
+} */
 
 .container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 20px;
   margin: 0px 50px;
 }
@@ -36,25 +38,26 @@ h2 {
   background-color: #ffffff;
   transition: 1s;
   border-radius: 2px;
+  color: black;
 }
 
-.hidden {
+/* .hidden {
   display: none;
-}
+} */
 
-.this-card {
+/* .this-card {
   background-color: #127972da;
   box-shadow: #ffffffda 4px 4px 0px 0px,
   #ffffffda 4px 4px 0px 0px;
   color: white
-}
+} */
 
-.old-card {
+/* .old-card {
   background-color: #d3d3d399;
   color: grey;
-}
+} */
 
-button {
+/* button {
   box-shadow: #127972da 3px 4px 0px 0px,
   #127972da 3px 4px 0px 0px;
   padding: 10px 20px;
@@ -62,33 +65,10 @@ button {
   border: none;
   margin: 50px 10px;
   border-radius: 60px;
+  background-color: white;
   font-family: 'Barlow', sans-serif;
   transition: box-shadow, .5s;
-}
-
-button:hover {
-  background-color: #127972da;
-  box-shadow: #127972da 0px 0px 0px 0px,
-  #127972da 0px 0px 0px 0px;
-  color: white
-}
-
-p {
-  font-size: 1.5rem;
-}
-
-.input-text {
-  box-shadow: #127972da 3px 4px 0px 0px,
-  #127972da 3px 4px 0px 0px;
-  border: none;
-  height: 40px;
-  width: 300px;
-  font-family: 'Barlow', sans-serif;
-  font-size: 1.3rem;
-  margin-left: 10px;
-  margin-right: 10px;
-  padding: 0px 7px;
-}
+} */
 
 .input-button {
   box-shadow: #127972da 3px 4px 0px 0px,
@@ -100,16 +80,44 @@ p {
   background-color: white;
   font-family: 'Barlow', sans-serif;
   transition: box-shadow, .5s;
+  margin: 50px 10px;
+  color: #222
 }
 
-#abschicken:hover {
+button:hover {
   background-color: #127972da;
   box-shadow: #127972da 0px 0px 0px 0px,
   #127972da 0px 0px 0px 0px;
   color: white
 }
 
-input {
+/* p {
+  font-size: 1.5rem;
+} */
+
+/* .input-text {
+  box-shadow: #127972da 3px 4px 0px 0px,
+  #127972da 3px 4px 0px 0px;
+  border: none;
+  height: 40px;
+  width: 300px;
+  font-family: 'Barlow', sans-serif;
+  font-size: 1.3rem;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 0px 7px;
+} */
+
+
+
+/* #abschicken:hover {
+  background-color: #127972da;
+  box-shadow: #127972da 0px 0px 0px 0px,
+  #127972da 0px 0px 0px 0px;
+  color: white
+} */
+
+/* input {
   background-color: #ffffff99;
   border-radius: 2px;
-}
+} */

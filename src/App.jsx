@@ -23,6 +23,26 @@ function App() {
       id: 4,
       name: 'Die Inseln im Nebel',
       played: false
+    },
+    {
+      id: 5,
+      name: 'Maus und Mystik',
+      played: false
+    },
+    {
+      id: 6,
+      name: 'Spirit Island',
+      played: false
+    },
+    {
+      id: 7,
+      name: 'Die Crew',
+      played: false
+    },
+    {
+      id: 8,
+      name: '7 Wonders',
+      played: false
     }
   ])
 
