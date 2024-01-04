@@ -117,7 +117,7 @@ button:hover {
   font-size: 1.5rem;
 } */
 
-/* .input-text {
+input {
   box-shadow: #127972da 3px 4px 0px 0px,
   #127972da 3px 4px 0px 0px;
   border: none;
@@ -128,8 +128,15 @@ button:hover {
   margin-left: 10px;
   margin-right: 10px;
   padding: 0px 7px;
-} */
+  background-color: #ffffff99;
+  border-radius: 2px;
+  color: #222
+}
 
+label {
+  color: #222;
+  font-size: 1.5rem;
+}
 
 
 /* #abschicken:hover {
@@ -137,9 +144,4 @@ button:hover {
   box-shadow: #127972da 0px 0px 0px 0px,
   #127972da 0px 0px 0px 0px;
   color: white
-} */
-
-/* input {
-  background-color: #ffffff99;
-  border-radius: 2px;
 } */
