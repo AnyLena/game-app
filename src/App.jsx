@@ -4,7 +4,28 @@ import AddGame from "./components/AddGame";
 import "./App.css";
 
 function App() {
-  const [games, setGames] = useState([]);
+  const [games, setGames] = useState([
+    {
+  id: 11,
+  name: "Iki",
+  played: false,
+},
+{
+  id: 12,
+  name: "Die Siedler von Catan",
+  played: false,
+},
+{
+  id: 13,
+  name: "Cabo",
+  played: false,
+},
+{
+  id: 14,
+  name: "Die Inseln im Nebel",
+  played: false,
+}
+  ]);
 
   return (
     <>

@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@200&family=Righteous&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@200&family=Righteous&display=swap");
 
 body {
-  font-family: 'Righteous', sans-serif;
+  font-family: "Righteous", sans-serif;
   text-align: center;
   background: rgb(208, 205, 255);
   background: #1cb6ad;
@@ -12,14 +12,8 @@ body {
 h1 {
   text-transform: uppercase;
   font-size: 3rem;
-  color: #222
+  color: #222;
 }
-
-/* h2 {
-  text-transform: uppercase;
-  font-size: 2rem;
-  margin-top: 100px
-} */
 
 .container {
   display: grid;
@@ -28,12 +22,29 @@ h1 {
   margin: 0px 50px;
 }
 
+@media screen and (max-width: 800px) {
+  .container {
+    grid-template-columns: 1fr 1fr 1fr;
+  } 
+}
+
+@media screen and (max-width: 650px) {
+  .container {
+    grid-template-columns: 1fr 1fr;
+  } 
+}
+
+@media screen and (max-width: 450px) {
+  .container {
+    grid-template-columns: 1fr;
+  } 
+}
+
 .card {
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: #127972da 4px 4px 0px 0px,
-  #127972da 0px 0px 0px 0px;
+  box-shadow: #127972da 4px 4px 0px 0px, #127972da 0px 0px 0px 0px;
   padding: 20px;
   font-size: 1.5rem;
   background-color: #ffffff;
@@ -43,15 +54,10 @@ h1 {
   position: relative;
 }
 
-/* .hidden {
-  display: none;
-} */
-
 .this-card {
   background-color: #127972da;
-  box-shadow: #ffffffda 4px 4px 0px 0px,
-  #ffffffda 4px 4px 0px 0px;
-  color: white
+  box-shadow: #ffffffda 4px 4px 0px 0px, #ffffffda 4px 4px 0px 0px;
+  color: white;
 }
 
 .old-card {
@@ -59,42 +65,31 @@ h1 {
   color: grey;
 }
 
-/* button {
-  box-shadow: #127972da 3px 4px 0px 0px,
-  #127972da 3px 4px 0px 0px;
-  padding: 10px 20px;
-  font-size: 1.5rem;
-  border: none;
-  margin: 50px 10px;
-  border-radius: 60px;
-  background-color: white;
-  font-family: 'Barlow', sans-serif;
-  transition: box-shadow, .5s;
-} */
-
 .input-button {
-  box-shadow: #127972da 3px 4px 0px 0px,
-  #127972da 3px 4px 0px 0px;
+  box-shadow: #127972da 3px 4px 0px 0px, #127972da 3px 4px 0px 0px;
   padding: 10px 20px;
   font-size: 1.5rem;
   border: none;
   border-radius: 60px;
   background-color: white;
-  font-family: 'Barlow', sans-serif;
-  transition: box-shadow, .5s;
-  margin: 50px 10px;
-  color: #222
+  font-family: "Barlow", sans-serif;
+  transition: box-shadow, 0.5s;
+  margin-top: 50px;
+  color: #222;
+}
+
+.input-button--margin {
+  margin: 15px 15px;
 }
 
 button:hover {
   background-color: #127972da;
-  box-shadow: #127972da 0px 0px 0px 0px,
-  #127972da 0px 0px 0px 0px;
-  color: white
+  box-shadow: #127972da 0px 0px 0px 0px, #127972da 0px 0px 0px 0px;
+  color: white;
 }
 
 .delete-btn {
-  background-color: rgb(237, 237, 237); 
+  background-color: rgb(237, 237, 237);
   border: none;
   color: #222;
   font-size: 15px;
@@ -103,45 +98,42 @@ button:hover {
   right: 5px;
   top: 5px;
   border-radius: 5px;
-  font-family: 'Righteous', sans-serif;
+  font-family: "Righteous", sans-serif;
 }
 
 .delete-btn:hover {
   background-color: #f72a2ada;
-  box-shadow: #f72a2ada 0px 0px 0px 0px,
-  #f72a2ada 0px 0px 0px 0px;
-  color: white
+  box-shadow: #f72a2ada 0px 0px 0px 0px, #f72a2ada 0px 0px 0px 0px;
+  color: white;
 }
 
-/* p {
+p {
   font-size: 1.5rem;
-} */
+}
+
+.alert-box {
+  color: #222;
+  background-color: #22222240;
+  padding: 10px;
+  margin-top: 50px;
+}
 
 input {
-  box-shadow: #127972da 3px 4px 0px 0px,
-  #127972da 3px 4px 0px 0px;
+  box-shadow: #127972da 3px 4px 0px 0px, #127972da 3px 4px 0px 0px;
   border: none;
   height: 40px;
   width: 300px;
-  font-family: 'Barlow', sans-serif;
+  font-family: "Barlow", sans-serif;
   font-size: 1.3rem;
   margin-left: 10px;
   margin-right: 10px;
   padding: 0px 7px;
   background-color: #ffffff99;
   border-radius: 2px;
-  color: #222
+  color: #222;
 }
 
 label {
   color: #222;
   font-size: 1.5rem;
 }
-
-
-/* #abschicken:hover {
-  background-color: #127972da;
-  box-shadow: #127972da 0px 0px 0px 0px,
-  #127972da 0px 0px 0px 0px;
-  color: white
-} */
