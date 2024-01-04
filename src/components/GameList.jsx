@@ -6,7 +6,7 @@ const GameList = ({ games, setGames }) => {
   useEffect(() => {
     if (nextGame !== undefined) {
       setGames(
-        games.map((game) => 
+        games.map((game) =>
           game.id === nextGame ? { ...game, played: true } : game
         )
       );
@@ -14,27 +14,39 @@ const GameList = ({ games, setGames }) => {
   }, [nextGame]);
 
   const handleNext = () => {
-    const unplayedGames = games.filter( game => game.played === false);
+    const unplayedGames = games.filter((game) => game.played === false);
     if (unplayedGames.length > 0) {
-        let next = Math.floor(Math.random() * unplayedGames.length);
-        setNextGame(unplayedGames[next].id);
+      let next = Math.floor(Math.random() * unplayedGames.length);
+      setNextGame(unplayedGames[next].id);
     }
   };
 
-const handleDelete = () => {
-    console.log('delete')
-}
+  const handleDelete = (id) => {
+    setGames(games.filter( game => game.id !== id))
+  };
 
   return (
     <>
       <div className="container">
         {games.map((game) => (
           <div
-            className={game.id === nextGame ? "card this-card" : "card"}
+            className={
+              game.id === nextGame
+                ? "card this-card"
+                : game.played === true
+                ? "card old-card"
+                : "card"
+            }
             key={game.id}
           >
             {game.name}
-            <button onClick={handleDelete} className="delete-btn">X</button>
+            {game.played ? (
+              ""
+            ) : (
+              <button onClick={() => handleDelete(game.id)} className="delete-btn">
+                X
+              </button>
+            )}
           </div>
         ))}
       </div>

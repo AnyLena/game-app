@@ -54,10 +54,10 @@ h1 {
   color: white
 }
 
-/* .old-card {
+.old-card {
   background-color: #d3d3d399;
   color: grey;
-} */
+}
 
 /* button {
   box-shadow: #127972da 3px 4px 0px 0px,
@@ -94,15 +94,23 @@ button:hover {
 }
 
 .delete-btn {
-  background-color: rgb(247, 247, 247); 
-  border: solid 1px #d8d8d8;
+  background-color: rgb(237, 237, 237); 
+  border: none;
   color: #222;
   font-size: 15px;
-  padding: 3px 6px;
+  padding: 1px 6px;
   position: absolute;
   right: 5px;
   top: 5px;
+  border-radius: 5px;
+  font-family: 'Righteous', sans-serif;
+}
 
+.delete-btn:hover {
+  background-color: #f72a2ada;
+  box-shadow: #f72a2ada 0px 0px 0px 0px,
+  #f72a2ada 0px 0px 0px 0px;
+  color: white
 }
 
 /* p {
