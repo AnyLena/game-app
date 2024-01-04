@@ -1,33 +1,54 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import GameList from './components/GameList'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [games, setGames] = useState([
+    {
+      id: 11,
+      name: 'Iki',
+      played: false
+    },
+    {
+      id: 12,
+      name: 'Die Siedler von Catan',
+      played: false
+    },
+    {
+      id: 13,
+      name: 'Cabo',
+      played: false
+    },
+    {
+      id: 14,
+      name: 'Die Inseln im Nebel',
+      played: false
+    },
+    {
+      id: 15,
+      name: 'Maus und Mystik',
+      played: false
+    },
+    {
+      id: 16,
+      name: 'Spirit Island',
+      played: false
+    },
+    {
+      id: 17,
+      name: 'Die Crew',
+      played: false
+    },
+    {
+      id: 18,
+      name: '7 Wonders',
+      played: false
+    }
+  ])
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+     <GameList games={games} setGames={setGames}/>
     </>
   )
 }
