@@ -45,12 +45,12 @@ body {
   display: none;
 } */
 
-/* .this-card {
+.this-card {
   background-color: #127972da;
   box-shadow: #ffffffda 4px 4px 0px 0px,
   #ffffffda 4px 4px 0px 0px;
   color: white
-} */
+}
 
 /* .old-card {
   background-color: #d3d3d399;

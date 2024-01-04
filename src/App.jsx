@@ -5,42 +5,42 @@ import './App.css'
 function App() {
   const [games, setGames] = useState([
     {
-      id: 1,
+      id: 11,
       name: 'Iki',
       played: false
     },
     {
-      id: 2,
+      id: 12,
       name: 'Die Siedler von Catan',
       played: false
     },
     {
-      id: 3,
+      id: 13,
       name: 'Cabo',
       played: false
     },
     {
-      id: 4,
+      id: 14,
       name: 'Die Inseln im Nebel',
       played: false
     },
     {
-      id: 5,
+      id: 15,
       name: 'Maus und Mystik',
       played: false
     },
     {
-      id: 6,
+      id: 16,
       name: 'Spirit Island',
       played: false
     },
     {
-      id: 7,
+      id: 17,
       name: 'Die Crew',
       played: false
     },
     {
-      id: 8,
+      id: 18,
       name: '7 Wonders',
       played: false
     }
@@ -48,7 +48,7 @@ function App() {
 
   return (
     <>
-     <GameList games={games}/>
+     <GameList games={games} setGames={setGames}/>
     </>
   )
 }
