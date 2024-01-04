@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 
 const GameList = ({ games, setGames }) => {
   const [nextGame, setNextGame] = useState();
+  const [playedGames,setPlayedGames] = useState(0);
 
   useEffect(() => {
     if (nextGame !== undefined) {
@@ -10,6 +11,7 @@ const GameList = ({ games, setGames }) => {
           game.id === nextGame ? { ...game, played: true } : game
         )
       );
+      setPlayedGames( playedGames => playedGames +1);
     }
   }, [nextGame]);
 
@@ -50,9 +52,9 @@ const GameList = ({ games, setGames }) => {
           </div>
         ))}
       </div>
-      <button className="input-button" onClick={handleNext}>
-        Welches Spiel als nächstes?
-      </button>
+      { games.length === 0 ? <p className="alert-box">Please Add Games</p> : playedGames >= games.length ? <><p className="alert-box">All Games Played <br /><button className="input-button input-button--margin">Reset Games</button> <button className="input-button input-button--margin">Start New List</button></p></> : <button className="input-button" onClick={handleNext}>
+        Choose Next Game
+      </button>}
     </>
   );
 };
