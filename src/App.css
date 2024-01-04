@@ -88,10 +88,28 @@ h1 {
   margin: 15px 15px;
 }
 
+.input-button--small {
+  box-shadow: #127972da 3px 4px 0px 0px, #127972da 3px 4px 0px 0px;
+  padding: 5px 20px;
+  margin: auto;
+  font-size: .8rem;
+  border: none;
+  border-radius: 60px;
+  background-color: white;
+  font-family: "Barlow", sans-serif;
+  transition: box-shadow, 0.5s;
+  color: #222;
+
+}
+
 button:hover {
   background-color: #127972da;
   box-shadow: #127972da 0px 0px 0px 0px, #127972da 0px 0px 0px 0px;
   color: white;
+}
+
+.input-button--small:hover {
+  
 }
 
 .delete-btn {
@@ -154,4 +172,17 @@ label {
   form button.input-button {
     margin-top: 20px;
   }
+}
+
+.game-list--title {
+  color: black;
+  margin-top: 50px;
+  background-color: #22222240;
+}
+
+.game {
+  margin: 10px 100px ;
+  display: grid;
+  grid-template-columns: 70px auto auto 70px 100px;
+  text-align: left;
 }

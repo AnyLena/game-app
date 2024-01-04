@@ -34,7 +34,7 @@ function App() {
       <GameList games={games} setGames={setGames} />
       <br />
       <AddGame setGames={setGames} games={games}/>
-      <AllGames />
+      <AllGames setGames={setGames} games={games}/>
     </>
   );
 }
