@@ -14,6 +14,7 @@ const AddGame = ({ setGames, games }) => {
         played: false,
       };
       setGames([...games, newGame]);
+      setGameName("");
     }
   };
   return (
@@ -23,6 +24,7 @@ const AddGame = ({ setGames, games }) => {
         <input
           type="text"
           id="new-game-input"
+          value={gameName}
           onChange={(e) => setGameName(e.target.value)}
         />
         <button className="input-button" onClick={handleNewGame}>

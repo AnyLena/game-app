@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
+import ResetGames from "./ResetGames";
 
 const GameList = ({ games, setGames }) => {
   const [nextGame, setNextGame] = useState();
-  const [playedGames,setPlayedGames] = useState(0);
+  const [playedGames, setPlayedGames] = useState(0);
 
   useEffect(() => {
     if (nextGame !== undefined) {
@@ -11,7 +12,7 @@ const GameList = ({ games, setGames }) => {
           game.id === nextGame ? { ...game, played: true } : game
         )
       );
-      setPlayedGames( playedGames => playedGames +1);
+      setPlayedGames((playedGames) => playedGames + 1);
     }
   }, [nextGame]);
 
@@ -24,11 +25,12 @@ const GameList = ({ games, setGames }) => {
   };
 
   const handleDelete = (id) => {
-    setGames(games.filter( game => game.id !== id))
+    setGames(games.filter((game) => game.id !== id));
   };
 
   return (
     <>
+      <div className="infotext">Games played: {playedGames}</div>
       <div className="container">
         {games.map((game) => (
           <div
@@ -45,16 +47,25 @@ const GameList = ({ games, setGames }) => {
             {game.played ? (
               ""
             ) : (
-              <button onClick={() => handleDelete(game.id)} className="delete-btn">
+              <button
+                onClick={() => handleDelete(game.id)}
+                className="delete-btn"
+              >
                 X
               </button>
             )}
           </div>
         ))}
       </div>
-      { games.length === 0 ? <p className="alert-box">Please Add Games</p> : playedGames >= games.length ? <><p className="alert-box">All Games Played <br /><button className="input-button input-button--margin">Reset Games</button> <button className="input-button input-button--margin">Start New List</button></p></> : <button className="input-button" onClick={handleNext}>
-        Choose Next Game
-      </button>}
+      {games.length === 0 ? (
+        <p className="alert-box">Please Add Games</p>
+      ) : playedGames >= games.length ? (
+        <ResetGames games={games} setGames={setGames} setPlayedGames={setPlayedGames} setNextGame={setNextGame}/>
+      ) : (
+        <button className="input-button" onClick={handleNext}>
+          Choose Next Game
+        </button>
+      )}
     </>
   );
 };
