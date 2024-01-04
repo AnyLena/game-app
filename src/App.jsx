@@ -1,6 +1,7 @@
 import { useState } from "react";
 import GameList from "./components/GameList";
 import AddGame from "./components/AddGame";
+import AllGames from "./components/AllGames";
 import "./App.css";
 
 function App() {
@@ -33,6 +34,7 @@ function App() {
       <GameList games={games} setGames={setGames} />
       <br />
       <AddGame setGames={setGames} games={games}/>
+      <AllGames setGames={setGames} games={games}/>
     </>
   );
 }
